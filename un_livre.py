@@ -51,7 +51,7 @@ else:
 def save_to_csv(data, filename="../output/data.csv"):
     fieldnames = data.keys()
     
-    with open(filename, mode="w", newline="", encoding="cp1252") as file:
+    with open(filename, mode="w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerow(data)
